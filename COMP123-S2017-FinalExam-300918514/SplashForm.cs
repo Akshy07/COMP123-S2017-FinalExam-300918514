@@ -25,9 +25,18 @@ namespace COMP123_S2017_FinalExam_300918514
             InitializeComponent();
         }
 
+        /// <summary>
+        /// This is the TICK event handler
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            PickHighestCardForm card = new PickHighestCardForm();
+            Program.card.Show();
+            this.Hide();
+            timer1_Tick.Enabled = false;
+        
         }
 
         private void SplashForm_Load(object sender, EventArgs e)
