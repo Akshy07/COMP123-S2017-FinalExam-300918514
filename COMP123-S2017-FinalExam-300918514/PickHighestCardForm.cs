@@ -11,16 +11,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 /*
- * Name:
- * Date:
- * StudentID:
- * Description:
- * Version:
+ * Name: Akshay Patel
+ * Date: August 17, 2017
+ * StudentID: 300918514
+ * Description: This is a PickHighestCard form.
+ * Version 0.1 - Modified the form
  */
 
 namespace COMP123_S2017_FinalExam_300918514
 {
-    public partial class PickHighestCardForm : Form
+    public partial class PickHighestCardForm : ScoreBoard
     {
         // PRIVATE INSTANCE VARIABLES ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         List<PictureBox> _dealtCardPictureBoxList;
@@ -29,6 +29,7 @@ namespace COMP123_S2017_FinalExam_300918514
         Deck _deck;
         Hand _hand;
         int _maximumPoints;
+        int _scoreboard;
 
         // PUBLIC PROPERTIES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
         public List<PictureBox> DealtCardPictureBoxList
@@ -199,6 +200,8 @@ namespace COMP123_S2017_FinalExam_300918514
             this._enableDealtCards();
             this._hideFinalScore();
             UserMessageTextBox.Text = "Click the Deal Button!";
+            ScoreBoard.Score = 0;
+            ScoreBoard.Time = 30;
         }
 
         /// <summary>
@@ -272,7 +275,7 @@ namespace COMP123_S2017_FinalExam_300918514
                 this.CurrentClickedCard.BackColor = Color.Green;
                 UserMessageTextBox.Text = "You Got It!";
 
-                //Uncomment this --> ScoreBoard.Score += this.MaximumPoints;
+                ScoreBoard.Score += this.MaximumPoints;
 
                 DealButton.Enabled = true;
             }
@@ -358,7 +361,7 @@ namespace COMP123_S2017_FinalExam_300918514
         /// <param name="e"></param>
         private void CountDownTimer_Tick(object sender, EventArgs e)
         {
-            /* Uncomment THIS
+            
             ScoreBoard.UpdateTime();
             if (ScoreBoard.Time == 0)
             {
@@ -367,7 +370,7 @@ namespace COMP123_S2017_FinalExam_300918514
                 this._disableDealtCards();
                 this._showFinalScore();
             }
-            */
+
         }
 
         /// <summary>
