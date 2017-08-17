@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 
 /*
- * Name: Tom Tsiliopoulos
- * Date: July 25, 2017
- * Description: This is the Suit enum
- * Version: 0.1 - Created the Suit enum
+ * Name: Akshay Patel
+ * Date: August 17, 2017
+ * StudentID: 300918514
+ * Description: This is the Suit Class
+ * Version-0.1 : Added to overwrite method.
  */
+
 
 namespace COMP123_S2017_FinalExam_300918514
 {

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 
 /*
- * Name: Tom Tsiliopoulos
- * Date: July 25, 2017
+ * Name: Akshay Patel
+ * Date: August 17, 2017
  * Description: This is the Card Class
  * Version: 0.3 - Added the OverWrite method
  */
